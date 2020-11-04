@@ -1,6 +1,5 @@
-header {
+nav {
   background-color: wheat;
-  text-align: center;
   margin-top: -15px;
   padding: 20px;
   height: 150px;
@@ -8,4 +7,16 @@ header {
 .headName {
   font-family: "Courgette", cursive;
   font-size: 75px;
+  text-align: center;
+}
+@media only screen and (max-width: 700px) {
+  nav {
+    padding: 25px;
+    height: 75px;
+  }
+  .headName {
+    font-family: "Courgette", cursive;
+    font-size: 25px;
+    text-align: center;
+  }
 }

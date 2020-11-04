@@ -1,0 +1,11 @@
+header {
+  background-color: wheat;
+  text-align: center;
+  margin-top: -15px;
+  padding: 20px;
+  height: 150px;
+}
+.headName {
+  font-family: "Courgette", cursive;
+  font-size: 75px;
+}

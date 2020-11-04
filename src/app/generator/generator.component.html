@@ -1,0 +1,48 @@
+<div class="mt-2 app">
+    <div class="container">
+        <div class="row"> 
+            <!-- We are using this two div to create two sections of 6,6 -->
+            <div class="col-md-6">
+                <!-- Adding a card bootstrap class -->
+                <div class="card shadow p-3 mb-5 bg-white rounded">
+                    <div class="card-body">
+                        <form >
+                            <!-- To load the image from local drive -->
+                            <div class="form-group">
+                                <label for="">Choose an Image</label>
+                                <input type="file" class="form-control" accept="image/*" (change)='displayPic($event)'>
+                            </div>
+                            <!-- To write top text and bottom text on the image -->
+                            <div class="form-group">
+                                <label for="">Text to add on top</label>
+                                <input type="text" name="topText" class="form-control" [(ngModel)]="topText" (keyup)="drawText()">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Text to add at bottom</label>
+                                <input type="text" name="bottomText" class="form-control" [(ngModel)]="bottomText" (keyup)="drawText()">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="">Text Color</label>
+                                        <color-chrome (onChangeComplete)="textColor($event)"></color-chrome>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="">Background Color</label>
+                                        <color-chrome (onChangeComplete)="bgColor($event)"></color-chrome>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-warning btn-block mt-2" (click)="download()">Download</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <canvas class="card shadow p-3 mb-5 bg-white rounded" #board height="630" width="500" style="background-color: #faf6f0;"></canvas>
+            </div>
+        </div>
+    </div>
+</div>

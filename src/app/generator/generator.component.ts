@@ -45,7 +45,7 @@ export class GeneratorComponent implements OnInit {
     ctx.fillStyle = this._bgColor;
     ctx.fillRect(0,0,canvas.width,canvas.height);
     ctx.fillStyle = this._textColor;
-    ctx.font = "20px Itim "
+    ctx.font = "30px Itim "
     ctx.textAlign = "center";
     ctx.fillText(this.topText,canvas.width/2,70);
     ctx.fillText(this.bottomText,canvas.width/2,585);
